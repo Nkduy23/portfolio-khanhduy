@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollY, useActiveSection } from "../../hooks/useScroll";
 import { NAV_LINKS } from "../../utils/constants";
@@ -8,6 +8,15 @@ export default function Navbar() {
   const sectionIds = NAV_LINKS.map((l) => l.id);
   const active = useActiveSection(sectionIds);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Track screen width
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const scrolled = scrollY > 50;
 
@@ -38,7 +47,16 @@ export default function Navbar() {
           boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.3)" : "none",
         }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 1.5rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           {/* Logo */}
           <button
             onClick={() => handleNavClick("hero")}
@@ -57,80 +75,84 @@ export default function Navbar() {
             <span style={{ color: "var(--purple)" }}>.</span>
           </button>
 
-          {/* Desktop Links */}
-          <div style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} className="hidden md:flex">
-            {NAV_LINKS.map((link) => {
-              const isActive = active === link.id;
-              return (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  style={{
-                    position: "relative",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "8px",
-                    background: "none",
-                    border: "none",
-                    cursor: "none",
-                    fontFamily: "DM Sans, sans-serif",
-                    fontSize: "0.875rem",
-                    fontWeight: 500,
-                    color: isActive ? "var(--accent)" : "var(--text-muted)",
-                    transition: "color 0.2s ease",
-                  }}
-                >
-                  {link.label}
-                  {isActive && (
-                    <motion.div
-                      layoutId="nav-indicator"
-                      style={{
-                        position: "absolute",
-                        bottom: "4px",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                        width: "20px",
-                        height: "2px",
-                        background: "linear-gradient(90deg, var(--accent), var(--purple))",
-                        borderRadius: "1px",
-                      }}
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </button>
-              );
-            })}
-          </div>
+          {/* Desktop Links — chỉ hiện khi không phải mobile */}
+          {!isMobile && (
+            <div style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
+              {NAV_LINKS.map((link) => {
+                const isActive = active === link.id;
+                return (
+                  <button
+                    key={link.id}
+                    onClick={() => handleNavClick(link.id)}
+                    style={{
+                      position: "relative",
+                      padding: "0.5rem 1rem",
+                      borderRadius: "8px",
+                      background: "none",
+                      border: "none",
+                      cursor: "none",
+                      fontFamily: "DM Sans, sans-serif",
+                      fontSize: "0.875rem",
+                      fontWeight: 500,
+                      color: isActive ? "var(--accent)" : "var(--text-muted)",
+                      transition: "color 0.2s ease",
+                    }}
+                  >
+                    {link.label}
+                    {isActive && (
+                      <motion.div
+                        layoutId="nav-indicator"
+                        style={{
+                          position: "absolute",
+                          bottom: "4px",
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                          width: "20px",
+                          height: "2px",
+                          background: "linear-gradient(90deg, var(--accent), var(--purple))",
+                          borderRadius: "1px",
+                        }}
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMenuOpen((v) => !v)}
-            className="flex md:hidden"
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "none",
-              padding: "0.5rem",
-              display: "flex",
-              flexDirection: "column",
-              gap: "5px",
-            }}
-            aria-label="Toggle menu"
-          >
-            {[0, 1, 2].map((i) => (
-              <span
-                key={i}
-                style={{
-                  display: "block",
-                  width: "22px",
-                  height: "2px",
-                  background: "var(--accent)",
-                  borderRadius: "1px",
-                  transition: "all 0.3s ease",
-                  transform: menuOpen ? (i === 0 ? "rotate(45deg) translate(5px, 5px)" : i === 1 ? "scaleX(0)" : "rotate(-45deg) translate(5px, -5px)") : "none",
-                }}
-              />
-            ))}
-          </button>
+          {/* Hamburger — chỉ hiện khi mobile */}
+          {isMobile && (
+            <button
+              onClick={() => setMenuOpen((v) => !v)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "none",
+                padding: "0.5rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "5px",
+              }}
+              aria-label="Toggle menu"
+            >
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  style={{
+                    display: "block",
+                    width: "22px",
+                    height: "2px",
+                    background: "var(--accent)",
+                    borderRadius: "1px",
+                    transition: "all 0.3s ease",
+                    transformOrigin: "center",
+                    transform: menuOpen ? (i === 0 ? "rotate(45deg) translate(5px, 5px)" : i === 1 ? "scaleX(0)" : "rotate(-45deg) translate(5px, -5px)") : "none",
+                  }}
+                />
+              ))}
+            </button>
+          )}
         </div>
       </motion.nav>
 
@@ -167,7 +189,7 @@ export default function Navbar() {
                 transition={{ delay: i * 0.06 }}
                 onClick={() => handleNavClick(link.id)}
                 style={{
-                  background: "none",
+                  background: active === link.id ? "rgba(0,212,255,0.06)" : "transparent",
                   border: "none",
                   cursor: "none",
                   textAlign: "left",
@@ -177,7 +199,6 @@ export default function Navbar() {
                   fontSize: "1.25rem",
                   fontWeight: 600,
                   color: active === link.id ? "var(--accent)" : "var(--text-primary)",
-                  background: active === link.id ? "rgba(0,212,255,0.06)" : "transparent",
                   transition: "all 0.2s",
                 }}
               >

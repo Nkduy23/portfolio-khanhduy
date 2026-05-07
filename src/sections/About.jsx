@@ -43,7 +43,7 @@ const infoItems = [
 
 export default function About() {
   return (
-    <section id="about" style={{ minHeight: "100vh", padding: "7rem 1.5rem", position: "relative" }}>
+    <section id="about" style={{ minHeight: "100vh", padding: "5rem 1.5rem", position: "relative" }}>
       {/* Subtle accent orb */}
       <div
         style={{
@@ -148,13 +148,14 @@ export default function About() {
                   display: "flex",
                   alignItems: "center",
                   gap: "1.5rem",
+                  flexWrap: "wrap",
                 }}
               >
                 {/* Avatar placeholder — replace src with hero.png */}
                 <div
                   style={{
-                    width: "200px",
-                    height: "200px",
+                    width: "150px",
+                    height: "150px",
                     borderRadius: "50%",
                     flexShrink: 0,
                     background: "linear-gradient(135deg, var(--accent), var(--purple))",
@@ -167,7 +168,7 @@ export default function About() {
                     color: "#0a0a0f",
                   }}
                 >
-                  <img src="./src/assets/avatar-khanhduy.jpg" alt="" style={{ width: "100%", height: "100%", borderRadius: "50%" }} />
+                  <img src="/avatar-khanhduy.jpg" alt="" style={{ width: "100%", height: "100%", borderRadius: "50%" }} />
                 </div>
                 <div>
                   <p style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--text-primary)", marginBottom: "0.25rem" }}>{PERSONAL_INFO.name}</p>
@@ -195,7 +196,7 @@ export default function About() {
             </Reveal>
 
             {/* Stats Grid */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
+            {/* <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
               {PERSONAL_INFO.stats.map((stat, i) => (
                 <Reveal key={stat.label} variant="fadeRight" delay={i * 0.1}>
                   <div
@@ -229,7 +230,7 @@ export default function About() {
                   </div>
                 </Reveal>
               ))}
-            </div>
+            </div> */}
 
             {/* Status badge */}
             <Reveal variant="fadeRight" delay={0.3}>

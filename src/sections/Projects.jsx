@@ -303,7 +303,7 @@ function ProjectCard({ project, index }) {
 
 export default function Projects() {
   return (
-    <section id="projects" style={{ padding: "7rem 1.5rem", position: "relative" }}>
+    <section id="projects" style={{ padding: "5rem 1.5rem", position: "relative" }}>
       <div
         style={{
           position: "absolute",

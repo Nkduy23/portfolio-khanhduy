@@ -71,7 +71,7 @@ export default function Skills() {
   const filtered = activeFilter === "all" ? allSkills : allSkills.filter((s) => s.category === activeFilter);
 
   return (
-    <section id="skills" style={{ padding: "7rem 1.5rem", position: "relative" }}>
+    <section id="skills" style={{ padding: "5rem 1.5rem", position: "relative" }}>
       <div
         style={{
           position: "absolute",

@@ -247,7 +247,7 @@ function MobileTimeline() {
 
 export default function Experience() {
   return (
-    <section id="experience" style={{ padding: "7rem 1.5rem", position: "relative" }}>
+    <section id="experience" style={{ padding: "5rem 1.5rem", position: "relative" }}>
       <div
         style={{
           position: "absolute",

@@ -77,7 +77,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" style={{ padding: "7rem 1.5rem", position: "relative" }}>
+    <section id="contact" style={{ padding: "5rem 1.5rem", position: "relative" }}>
       <div
         style={{
           position: "absolute",
