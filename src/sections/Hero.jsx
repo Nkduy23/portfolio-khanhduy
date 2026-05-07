@@ -427,8 +427,8 @@ export default function Hero() {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               style={{
                 position: "absolute",
-                top: "10%",
-                left: "-10%",
+                top: "-5%",
+                left: "-5%",
                 padding: "0.5rem 0.875rem",
                 background: "rgba(18,18,26,0.9)",
                 border: "1px solid rgba(0,212,255,0.25)",
@@ -449,8 +449,8 @@ export default function Hero() {
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               style={{
                 position: "absolute",
-                bottom: "15%",
-                right: "-8%",
+                bottom: "8%",
+                right: "-2%",
                 padding: "0.5rem 0.875rem",
                 background: "rgba(18,18,26,0.9)",
                 border: "1px solid rgba(167,139,250,0.25)",

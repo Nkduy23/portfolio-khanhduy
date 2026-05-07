@@ -138,9 +138,9 @@ export const PERSONAL_INFO = {
   github: "https://github.com/Nkduy23",
   linkedin: "https://www.linkedin.com/in/khanh-duy-66390a3a1/",
   bio: "Sinh viên Web Programming tại FPT Polytechnic, đam mê xây dựng những sản phẩm web có trải nghiệm người dùng xuất sắc. Có kinh nghiệm làm Team Leader và phát triển full-stack. Luôn học hỏi và sẵn sàng nhận thử thách mới.",
-  stats: [
-    { label: "GPA", value: "3.79", suffix: "/4.0" },
-    { label: "Projects", value: "3", suffix: "+" },
-    { label: "Stack", value: "10", suffix: "+" },
-  ],
+  // stats: [
+  //   { label: "GPA", value: "3.79", suffix: "/4.0" },
+  //   { label: "Projects", value: "3", suffix: "+" },
+  //   { label: "Stack", value: "10", suffix: "+" },
+  // ],
 };
