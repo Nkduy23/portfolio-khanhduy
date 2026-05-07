@@ -41,6 +41,7 @@ export default function SectionTitle({ children, subtitle, align = "left" }) {
           }}
         />
       </Reveal>
+      <span></span>
     </div>
   );
 }
