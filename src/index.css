@@ -1,0 +1,16 @@
+@import "./styles/globals.css";
+@import "tailwindcss";
+@import "./styles/animations.css";
+
+/* Tailwind v4 theme tokens */
+@theme {
+  --color-bg: #0a0a0f;
+  --color-surface: #12121a;
+  --color-accent: #00d4ff;
+  --color-purple: #a78bfa;
+  --color-muted: #6b7280; 
+
+  --font-family-display: 'Space Grotesk', sans-serif;
+  --font-family-body: 'DM Sans', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+}

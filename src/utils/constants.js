@@ -1,0 +1,146 @@
+export const NAV_LINKS = [
+  { id: "hero", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "contact", label: "Contact" },
+];
+
+export const SKILLS = {
+  frontend: [
+    { name: "React", icon: "⚛️" },
+    { name: "Next.js", icon: "▲" },
+    { name: "Angular", icon: "🅰️" },
+    { name: "TypeScript", icon: "𝙏𝙎" },
+    { name: "TailwindCSS", icon: "🌊" },
+    { name: "HTML5", icon: "🧱" },
+    { name: "CSS3", icon: "🎨" },
+    { name: "SASS", icon: "💎" },
+  ],
+  backend: [
+    { name: "Node.js", icon: "🟢" },
+    { name: "Express", icon: "🚂" },
+    { name: "PHP", icon: "🐘" },
+  ],
+  database: [
+    { name: "MongoDB", icon: "🍃" },
+    { name: "PostgreSQL", icon: "🐘" },
+    { name: "MySQL", icon: "🐬" },
+    { name: "Prisma", icon: "◆" },
+  ],
+  tools: [
+    { name: "Git", icon: "🌿" },
+    { name: "Docker", icon: "🐳" },
+    { name: "Figma", icon: "🎭" },
+    { name: "NPM", icon: "📦" },
+    { name: "Vite", icon: "⚡" },
+    { name: "Linux", icon: "🐧" },
+  ],
+};
+
+export const PROJECTS = [
+  {
+    id: 1,
+    title: "Chợ Công Nghệ",
+    subtitle: "E-Commerce Platform",
+    description: "Hệ thống thương mại điện tử quy mô lớn — mua bán thiết bị công nghệ với đầy đủ tính năng: tìm kiếm nâng cao, giỏ hàng, thanh toán, quản lý đơn hàng và upload ảnh sản phẩm.",
+    stack: "Next.js · Express · Prisma · PostgreSQL · Cloudinary",
+    deploy: "Vercel · Render · Neon",
+    tags: ["Next.js", "Express", "Prisma", "PostgreSQL", "Cloudinary"],
+    github: "https://github.com/ChoCongNgheTeam",
+    demo: "https://chocongnghe.id.vn/",
+    color: "#a78bfa",
+    emoji: "🛒",
+    badge: { label: "Live · Domain riêng", color: "#a78bfa" },
+  },
+  {
+    id: 2,
+    title: "Barber Queue",
+    subtitle: "Queue Management App",
+    description: "Ứng dụng quản lý hàng chờ tiệm tóc — đặt lịch online, theo dõi thời gian chờ realtime, quản lý khách hàng và ca làm việc của thợ.",
+    stack: "Next.js · JavaScript · PostgreSQL",
+    deploy: "Vercel · Supabase",
+    tags: ["Next.js", "JavaScript", "PostgreSQL", "Supabase"],
+    github: "https://github.com/Nkduy23/Barber-Queue-FE",
+    demo: "https://barber-queue-fe.vercel.app/",
+    color: "#34d399",
+    emoji: "✂️",
+    badge: { label: "Live · Vercel", color: "#34d399" },
+  },
+  {
+    id: 3,
+    title: "NhaMayMan-Hanh",
+    subtitle: "Factory Management System",
+    description: "Hệ thống quản lý nhà máy thiện nguyện đang vận hành thực tế — quản lý nhân sự, ca làm việc, báo cáo năng suất với kiến trúc module hóa full-stack.",
+    stack: "Next.js · Express · MongoDB · Tailwind CSS",
+    deploy: "Vercel · Render",
+    tags: ["Next.js", "Express", "MongoDB", "Tailwind"],
+    github: "https://github.com/NhaMayMan-Hanh",
+    demo: null,
+    color: "#00d4ff",
+    emoji: "🏭",
+    badge: { label: "Thiện nguyện · Production", color: "#00d4ff" },
+  },
+];
+
+export const EXPERIENCE = [
+  {
+    year: "2021 - 2023",
+    title: "Analyst, Sorting",
+    subtitle: "SPX Express",
+    description: "Kiểm soát quy trình phân loại và vận hành dòng hàng. Xử lý sự cố dữ liệu vận đơn và phối hợp tối ưu hóa hiệu suất kho bãi.",
+    type: "work",
+  },
+  {
+    year: "2023 - 2026",
+    title: "Sinh viên Lập trình Web",
+    subtitle: "Cao đẳng FPT Polytechnic",
+    description: "Tốt nghiệp chuyên ngành Lập trình Web với GPA Xuất sắc 3.79/4.0. Nắm vững tư duy lập trình, cấu trúc dữ liệu và giải thuật.",
+    type: "education",
+  },
+  {
+    year: "2024",
+    title: "Barber Queue Project",
+    subtitle: "Frontend Developer",
+    description: "Xây dựng ứng dụng đặt lịch và quản lý hàng chờ thời gian thực (Real-time). Tích hợp Supabase để quản lý dữ liệu linh hoạt.",
+    type: "project",
+  },
+  {
+    year: "2025 - 2026",
+    title: "Team Leader & Full-Stack Developer",
+    subtitle: "Dự án: ChoCongNghe & NhaMayMan",
+    description:
+      "Dẫn dắt phát triển hệ thống Marketplace và Quản lý nhà máy thực tế. Triển khai kiến trúc Full-stack (Next.js, Express, PostgreSQL/MongoDB) và tối ưu hóa luồng thanh toán, quản lý đơn hàng.",
+    type: "project",
+  },
+  {
+    year: "Hiện tại",
+    title: "Frontend Developer (Available for Work)",
+    subtitle: "Intern / Fresher",
+    description: "Sẵn sàng thực chiến với thế mạnh về Next.js, Tailwind CSS và khả năng xử lý Backend. Tập trung vào việc tạo ra sản phẩm chỉn chu, có giá trị sử dụng thực tế.",
+    type: "current",
+  },
+];
+
+export const PERSONAL_INFO = {
+  name: "Nguyen Khanh Duy",
+  nameVi: "Nguyễn Khánh Duy",
+  born: 2003,
+  role: "Frontend Developer Intern",
+  roles: ["Frontend Developer", "Fullstack Learner", "Team Leader"],
+  email: "nguyenkhanhduy23803@gmail.com",
+  phone: "+84 815 934 934",
+  location: "Cu Chi, Ho Chi Minh City, Vietnam",
+  school: "FPT Polytechnic College",
+  major: "Web Programming",
+  gpa: "3.79 / 4.0",
+  github: "https://github.com/Nkduy23",
+  linkedin: "https://www.linkedin.com/in/khanh-duy-66390a3a1/",
+  bio: "Sinh viên Web Programming tại FPT Polytechnic, đam mê xây dựng những sản phẩm web có trải nghiệm người dùng xuất sắc. Có kinh nghiệm làm Team Leader và phát triển full-stack. Luôn học hỏi và sẵn sàng nhận thử thách mới.",
+  stats: [
+    { label: "GPA", value: "3.79", suffix: "/4.0" },
+    { label: "Projects", value: "3", suffix: "+" },
+    { label: "Stack", value: "10", suffix: "+" },
+  ],
+};
