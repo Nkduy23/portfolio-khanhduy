@@ -1,6 +1,6 @@
 # 🧑‍💻 Nguyen Khanh Duy — Personal Portfolio
 
-> *"Code with passion, lead with purpose, learn with curiosity"*
+> _"Code with passion, lead with purpose, learn with curiosity"_
 
 ---
 
@@ -22,6 +22,7 @@ Portfolio cá nhân của **Nguyễn Khánh Duy** — sinh viên Cao đẳng FPT
 ## 🖌️ Design Direction
 
 ### Aesthetic: **Dark Glass UI**
+
 - **Background:** Nền tối (`#0a0a0f` / `#0d0d14`) — tạo chiều sâu và không gian
 - **Glass Effect:** Chỉ dùng cho Card, Navbar, Modal — `backdrop-filter: blur` + border mờ
 - **Accent:** Màu xanh cyan điện (`#00d4ff`) kết hợp tím nhạt (`#a78bfa`) — như ánh đèn neon trong đêm
@@ -29,6 +30,7 @@ Portfolio cá nhân của **Nguyễn Khánh Duy** — sinh viên Cao đẳng FPT
 - **Feeling:** Giống mở iPhone lúc nửa đêm — tối, mịn, sáng đúng chỗ
 
 ### UI Components có Glass effect:
+
 - Navbar (sticky, blur khi scroll)
 - Project Cards
 - Skill Badges
@@ -40,26 +42,30 @@ Portfolio cá nhân của **Nguyễn Khánh Duy** — sinh viên Cao đẳng FPT
 ## ✨ Tính năng chính
 
 ### 🎬 Hero Section
+
 - **Nhân vật hoạt hình** chuyển động bằng CSS/SVG animation (hoặc Lottie JSON)
 - Text typing effect với vai trò: "Frontend Developer", "Fullstack Learner", "Team Leader"
 - Particle hoặc floating orbs background
 - Scroll indicator dẫn xuống phần tiếp theo
 
 ### 📍 Sticky Navigation
+
 - Navbar sticky với blur glass khi cuộn
 - Active state tự động đổi khi scroll tới từng section
 - Smooth scroll khi click menu
 
 ### 🎭 Scroll Animations (mỗi section khác nhau)
-| Section | Animation Style |
-|---|---|
-| About | Fade in từ trái + text split reveal |
-| Skills | Stagger appear từng badge |
-| Projects | Card flip / slide in từ dưới |
-| Experience | Timeline draw từ trên xuống |
-| Contact | Zoom fade in |
+
+| Section    | Animation Style                     |
+| ---------- | ----------------------------------- |
+| About      | Fade in từ trái + text split reveal |
+| Skills     | Stagger appear từng badge           |
+| Projects   | Card flip / slide in từ dưới        |
+| Experience | Timeline draw từ trên xuống         |
+| Contact    | Zoom fade in                        |
 
 ### 🖱️ Custom Cursor
+
 - Cursor tùy chỉnh (dot + ring) theo chuột
 - Hover effect trên interactive elements
 
@@ -67,15 +73,15 @@ Portfolio cá nhân của **Nguyễn Khánh Duy** — sinh viên Cao đẳng FPT
 
 ## 🛠️ Tech Stack
 
-| Công nghệ | Mục đích |
-|---|---|
-| React 18 + Vite | Framework chính |
-| TypeScript | Type safety |
-| Tailwind CSS | Styling utility |
-| Framer Motion | Animation library chính |
-| GSAP (optional) | Complex timeline animation |
+| Công nghệ                   | Mục đích                   |
+| --------------------------- | -------------------------- |
+| React 18 + Vite             | Framework chính            |
+| TypeScript                  | Type safety                |
+| Tailwind CSS                | Styling utility            |
+| Framer Motion               | Animation library chính    |
+| GSAP (optional)             | Complex timeline animation |
 | React Intersection Observer | Scroll-triggered animation |
-| Lottie React | Character animation |
+| Lottie React                | Character animation        |
 
 ---
 
@@ -124,11 +130,11 @@ src/
 
 ## 🚀 Projects nổi bật (từ GitHub)
 
-| Project | Mô tả | Stack |
-|---|---|---|
+| Project            | Mô tả                                         | Stack      |
+| ------------------ | --------------------------------------------- | ---------- |
 | **NhaMayMan-Hanh** | Hệ thống quản lý nhà máy (Frontend + Backend) | TypeScript |
-| **ChoCongNghe** | Web marketplace công nghệ | TypeScript |
-| **Barber-Queue** | App quản lý hàng chờ tiệm tóc | JavaScript |
+| **ChoCongNghe**    | Web marketplace công nghệ                     | TypeScript |
+| **Barber-Queue**   | App quản lý hàng chờ tiệm tóc                 | JavaScript |
 
 ---
 
@@ -153,8 +159,16 @@ npm run build
 
 ## 🌐 Deploy
 
-- **Platform:** Vercel (hiện có: `my-profile-taupe-five.vercel.app`)
-- Auto-deploy từ nhánh `main`
+**Platform:** Vercel  
+**Production URL:** https://portfolio-khanhduy.vercel.app/  
+**Auto Deploy:** Connected with GitHub (`main` branch)
+
+### Services
+
+- Frontend: Next.js / React
+- Backend APIs: Render
+- Database: PostgreSQL / MongoDB
+- Media Storage: Cloudinary
 
 ---
 
@@ -162,16 +176,16 @@ npm run build
 
 - [x] Thiết kế cấu trúc dự án
 - [x] Viết README & SKILL planning
-- [ ] Setup Vite + React + Tailwind
-- [ ] Layout cơ bản + Routing
-- [ ] Navbar sticky + active scroll
-- [ ] Hero section + character animation
-- [ ] About, Skills, Projects sections
-- [ ] Experience, Contact, CTA sections
-- [ ] Custom cursor + micro interactions
-- [ ] Performance optimization
-- [ ] Deploy lên Vercel
+- [x] Setup Vite + React + Tailwind
+- [x] Layout cơ bản + Routing
+- [x] Navbar sticky + active scroll
+- [x] Hero section + character animation
+- [x] About, Skills, Projects sections
+- [x] Experience, Contact, CTA sections
+- [x] Custom cursor + micro interactions
+- [x] Performance optimization
+- [x] Deploy lên Vercel
 
 ---
 
-*Portfolio này được xây dựng với ❤️ bởi Nguyen Khanh Duy — 2025*
+_Portfolio này được xây dựng với ❤️ bởi Nguyen Khanh Duy — 2025_
