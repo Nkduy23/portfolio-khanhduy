@@ -149,6 +149,7 @@ export default function About() {
                   alignItems: "center",
                   gap: "1.5rem",
                   flexWrap: "wrap",
+                  justifyContent: "center",
                 }}
               >
                 {/* Avatar placeholder — replace src with hero.png */}
